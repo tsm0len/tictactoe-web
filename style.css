@@ -1,0 +1,13 @@
+.board {
+    background-color: #8dc6ff;
+    width:fit-content;
+    padding: 10px;
+}
+.cell {
+    width: 100px;
+    height: 100px;
+    border: none;
+    margin: 5px;
+    background-color: #e4f1fe;
+    padding: 5px;
+}

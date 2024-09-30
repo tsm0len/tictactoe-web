@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="script.js"></script>
+    <link rel="stylesheet" href="style.css">
+    <title>TicTacToe</title>
+</head>
+<body onload="setup()">
+    <div class="board">
+        <button onclick="move('a1', 0)" id="a1" class="cell">_</button>
+        <button onclick="move('a2', 1)" id="a2" class="cell">_</button>
+        <button onclick="move('a3', 2)" id="a3" class="cell">_</button>
+        <br>
+        <button onclick="move('b1', 3)" id="b1" class="cell">_</button>
+        <button onclick="move('b2', 4)" id="b2" class="cell">_</button>
+        <button onclick="move('b3', 5)" id="b3" class="cell">_</button>
+        <br>
+        <button onclick="move('c1', 6)" id="c1" class="cell">_</button>
+        <button onclick="move('c2', 7)" id="c2" class="cell">_</button>
+        <button onclick="move('c3', 8)" id="c3" class="cell">_</button>
+    </div>
+    <button onclick="reset()">reset</button>
+</body>
+</html>
