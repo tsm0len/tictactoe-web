@@ -1,6 +1,5 @@
 TO DO:
-- reset turn
-- check for win
 - hover animation
 - cell occupied animation
 - win history (maybe)
+- good height
