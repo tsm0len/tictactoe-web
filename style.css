@@ -2,6 +2,7 @@
     background-color: #8dc6ff;
     width:fit-content;
     padding: 10px;
+    display: inline-grid;
 }
 .cell {
     width: 100px;
@@ -10,4 +11,11 @@
     margin: 5px;
     background-color: #e4f1fe;
     padding: 5px;
+}
+.cell:hover {
+    background-color: #e4f1fe9f;
+}
+.resetbutton {
+    border: none;
+    border-radius: 5px;
 }
