@@ -3,6 +3,7 @@ body {
     height: 100%;
     color: #22313f;
     background-color: #34495e;
+    font-family: 'Gill Sans', sans-serif;
 }
 .cell {
     background-color: #e4f1fe;
@@ -25,13 +26,29 @@ body {
     width: 100%;
     font-size: 50px;
     margin-top: 10px;
+    background-color: #e4f1fe;
+}
+.resetbutton:hover {
+    background-color: #c7d3df;
 }
 .win {
     position: absolute;
     left: 50%;
-    bottom: 25%;
+    top: 30%;
     transform: translate(-50%, -20%);
     display: none;
+    border: solid #22313f;
+}
+.scores {
+    text-align: center;
+    font-size: 30px;
+    background-color: #e4f1fe;
+    border-radius: 5px;
+    margin: 15px;
+    display: flex;
+}
+.score {
+    margin: auto;
 }
 @media only screen and (max-width: 480px) {
     .cell {
@@ -48,12 +65,18 @@ body {
     }
     .resetbutton {
         font-size: 25px;
+        height: 30px;
     }
     .win {
         font-size: 50px;
         background-color: #6083a5;
         left: 50%;
         bottom: 15%;
+        height:fit-content;
+    }
+    .score {
+        font-size: 20px;
+        padding-top: 2px;
     }
 }
 @media only screen and (min-width: 480px) {
@@ -70,7 +93,7 @@ body {
     }
     .win {
         background-color: #6083a5c7;
-        font-size: 180px;
+        font-size: 5vi;
     }
 }
 .first-color { 
