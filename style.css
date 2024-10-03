@@ -1,20 +1,23 @@
 body {
     width: 95%;
-    max-height: 90%;
+    height: 100%;
     color: #22313f;
     background-color: #34495e;
 }
 .cell {
     background-color: #e4f1fe;
 }
+
 .board {
     background-color: #8dc6ff;
     padding: 20px;
     width: max-content;
     margin: auto;
-}
-.cell:hover {
-    background-color: #e4f1fe9f;
+    height:fit-content;
+    max-height: 90em;
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%);
 }
 .resetbutton {
     border: none;
@@ -22,6 +25,13 @@ body {
     width: 100%;
     font-size: 50px;
     margin-top: 10px;
+}
+.win {
+    position: absolute;
+    left: 50%;
+    bottom: 25%;
+    transform: translate(-50%, -20%);
+    display: none;
 }
 @media only screen and (max-width: 480px) {
     .cell {
@@ -34,16 +44,33 @@ body {
     }
     .board {
         padding: 10px;
+        margin-top: 20px;
+    }
+    .resetbutton {
+        font-size: 30px;
+    }
+    .win {
+        font-size: 50px;
+        background-color: #6083a5;
+        left: 50%;
+        bottom: 15%;
     }
 }
 @media only screen and (min-width: 480px) {
     .cell {
-        width: 25vw;
-        height: 25vw;
+        width: 20vi;
+        height: 20vw;
         border: none;
         margin: 5px;
         padding: 5px;
         font-size: 60px;
+    }
+    .board {
+        min-height: fit-content;
+    }
+    .win {
+        background-color: #6083a5c7;
+        font-size: 180px;
     }
 }
 .first-color { 
