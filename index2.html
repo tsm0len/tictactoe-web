@@ -10,19 +10,19 @@
 <body>
     <div class="board">
         <div class="row1">
-            <button onclick="move('a1', 0)" id="a1" class="cell">_</button>
-            <button onclick="move('a2', 1)" id="a2" class="cell">_</button>
-            <button onclick="move('a3', 2)" id="a3" class="cell">_</button>
+            <button onclick="place('a1', 0)" id="a1" class="cell">_</button>
+            <button onclick="place('a2', 1)" id="a2" class="cell">_</button>
+            <button onclick="place('a3', 2)" id="a3" class="cell">_</button>
         </div>
         <div class="row2">
-            <button onclick="move('b1', 3)" id="b1" class="cell">_</button>
-            <button onclick="move('b2', 4)" id="b2" class="cell">_</button>
-            <button onclick="move('b3', 5)" id="b3" class="cell">_</button>
+            <button onclick="place('b1', 3)" id="b1" class="cell">_</button>
+            <button onclick="place('b2', 4)" id="b2" class="cell">_</button>
+            <button onclick="place('b3', 5)" id="b3" class="cell">_</button>
         </div>
         <div class="row3">
-            <button onclick="move('c1', 6)" id="c1" class="cell">_</button>
-            <button onclick="move('c2', 7)" id="c2" class="cell">_</button>
-            <button onclick="move('c3', 8)" id="c3" class="cell">_</button>
+            <button onclick="place('c1', 6)" id="c1" class="cell">_</button>
+            <button onclick="place('c2', 7)" id="c2" class="cell">_</button>
+            <button onclick="place('c3', 8)" id="c3" class="cell">_</button>
         </div>
         <button onclick="reset()" class="resetbutton">CLEAR</button>
         <div class="scores">
@@ -32,6 +32,6 @@
         </div>
     </div>
     <p class="win" id="win">WIN</p>
-    <button onclick="botmove()">move</button>
+    <button onclick="botmove()">place</button>
 </body>
 </html>
