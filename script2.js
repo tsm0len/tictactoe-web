@@ -3,7 +3,7 @@ let turn = "X"; //current turn
 let win = false; //is current game won or not
 let moves = 0; //number of moves made
 let scores = [0, 0, 0]; //wins for [x, o, draw]
-const cellIDs = ["a1","a2","a3","b1","b2","b3","c1","c2","c3"] //all cells ids
+const cellIDs = ["a1","a2","a3","b1","b2","b3","c1","c2","c3"]; //all cells ids
 const combinations = [ //all win combinations
     [0, 1, 2],
     [3, 4, 5],
