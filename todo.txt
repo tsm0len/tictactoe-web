@@ -1,3 +1,3 @@
 TO DO:
-- win history (maybe)
-- bot (maybe)
+- delay
+- turn on/off bot
