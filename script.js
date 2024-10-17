@@ -44,12 +44,12 @@ function move(cellid, cell) {
 function place(cellid, cell, byPlayer) { //make move in game
     //console.log(cellid + " " + cell + " " + byPlayer);
     if (win===false) {
-        if (board[cell]==null) {
-            board[cell] = turn;
+        if (board[cell]==null) { //if clicked cell is empty
+            board[cell] = turn; //change it to current turn
             console.log("placed "+turn+" on: "+cell+" | "+byPlayer);
             moves++;
             document.getElementById(cellid).textContent = turn;
-            combinations.forEach(array => {//================
+            combinations.forEach(array => { //checking each combination of possible wins
                 if (board[array[0]]===board[array[1]] && board[array[1]]===board[array[2]] && board[array[0]]!=null) {
                     array.forEach(element => {
                         document.getElementById(cellIDs[element]).style.backgroundColor = "#0044ff";
@@ -84,32 +84,32 @@ function place(cellid, cell, byPlayer) { //make move in game
     }
 }
 function botmove(x) {
-    place(cellIDs[x], x, false);   
+    place(cellIDs[x], x, false);
 }
 function choseCell() {
-    let chosen = 4; //Math.floor(Math.random()*9);
+    let chosen = 4;
     let emptyCorners = [];
     let emptyEdges = [];
-    corners.forEach(corner => {
+    corners.forEach(corner => { //looking for empty corners
         if (board[corner]==null) {
             emptyCorners.push(corner);
         }
     });
-    edges.forEach(edge => {
+    edges.forEach(edge => { //looking for empty edges
         if (board[edge]==null) {
             emptyEdges.push(edge);
         }
     });
     if (board[chosen]!=null) {
         if (emptyCorners.length) {
-            chosen = emptyCorners[Math.floor(Math.random()*emptyCorners.length)];
+            chosen = emptyCorners[Math.floor(Math.random()*emptyCorners.length)]; //choosing random corner if empty
         } else if (emptyEdges.length) {
-            chosen = emptyEdges[Math.floor(Math.random()*emptyEdges.length)];
+            chosen = emptyEdges[Math.floor(Math.random()*emptyEdges.length)]; //choosing random edge if empty
         }
     }
-    let testboard = board;
+    let testboard = board; //copying board for testing
     nextturn();
-    for (let i=0;i<9;i++) {
+    for (let i=0;i<9;i++) { //testing if bot can lose next round
         if (testboard[i]==null) {
             testboard[i] = turn;
             combinations.forEach(array => {
@@ -123,7 +123,7 @@ function choseCell() {
         } 
     }
     nextturn();
-    for (let i=0;i<9;i++) {
+    for (let i=0;i<9;i++) { //testing if bot can win next round
         if (testboard[i]==null) {
             testboard[i] = turn;
             combinations.forEach(array => {
